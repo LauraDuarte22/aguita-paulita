@@ -28,7 +28,7 @@ export default function ProgressRing({ progress, total, goal, displayTotal }) {
         shadow-blue-100/40
       "
     >
-      <div className="relative w-[190px] h-[190px] mx-auto mb-4">
+      <div className="relative w-[490px] h-[190px] mx-auto mb-4">
         {/* Glow background */}
         <div
           className="
@@ -110,7 +110,7 @@ export default function ProgressRing({ progress, total, goal, displayTotal }) {
             {displayTotal}
           </div>
 
-          <div className="text-xs text-slate-400 mt-1">
+          <div className="text-lg text-slate-400 mt-1">
             de {goal / 1000} litros
           </div>
         </motion.div>

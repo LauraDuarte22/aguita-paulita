@@ -23,7 +23,7 @@ export function useWaterTracker() {
 
   // Nombre
   const [userName, setUserName] = useState(() => {
-    return localStorage.getItem('water_username') || 'Mi amor';
+    return localStorage.getItem('water_username') || 'Paulita';
   });
 
   // Input personalizado
