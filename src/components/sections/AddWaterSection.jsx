@@ -134,6 +134,7 @@ export default function AddWaterSection({ water }) {
             text-white
 
             rounded-2xl
+            cursor-pointer
 
             px-4
             py-2.5
