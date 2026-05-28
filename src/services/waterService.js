@@ -19,7 +19,6 @@ export async function getWaterEntries(dateKey) {
 
     return [];
   } catch (error) {
-    console.error(error);
     return [];
   }
 }
@@ -34,6 +33,5 @@ export async function saveWaterEntries(dateKey, entries) {
       updatedAt: Date.now(),
     });
   } catch (error) {
-    console.error(error);
   }
 }
