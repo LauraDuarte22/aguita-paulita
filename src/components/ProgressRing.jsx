@@ -151,13 +151,13 @@ export default function ProgressRing({
               z-20
             "
           >
-            <div className="text-4xl font-bold text-slate-800">
+            <div className="text-3xl font-bold text-slate-800">
               {displayTotal}
             </div>
 
-            <div className="text-sm text-slate-400 mt-1">
-              de {goal / 1000}L
-            </div>
+            <div className="text-xs sm:text-sm text-slate-400 mt-1">
+  de {(goal / 1000).toFixed(1)}L
+</div>
           </motion.div>
         </div>
 
