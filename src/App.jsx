@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import FloatingFeedback from './components/FloatingFeedback';
 import BottomNav from './components/BottomNav';
-
+import PWAUpdateButton from "./components/PWAUpdateButton";
 import HomeLayout from './layouts/HomeLayout';
 import StatsLayout from './layouts/StatsLayout';
 import SettingsLayout from './layouts/SettingsLayout';
@@ -18,6 +18,10 @@ export default function App() {
   const water = useWaterTracker();
 
   return (
+    <>
+          <PWAUpdateButton />
+
+  
     <div
       className="
         min-h-screen
@@ -45,5 +49,6 @@ export default function App() {
       {/* Bottom navigation */}
       <BottomNav currentTab={currentTab} setCurrentTab={setCurrentTab} />
     </div>
+    </>
   );
 }
