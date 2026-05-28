@@ -1,26 +1,26 @@
 // src/App.jsx
 
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 import FloatingFeedback from './components/FloatingFeedback';
 import BottomNav from './components/BottomNav';
-import PWAUpdateButton from "./components/PWAUpdateButton";
 import HomeLayout from './layouts/HomeLayout';
 import StatsLayout from './layouts/StatsLayout';
 import SettingsLayout from './layouts/SettingsLayout';
 
 import { useWaterTracker } from './hooks/useWaterTracker';
+import { registerAutoUpdateSW } from "./hooks/useUpdatePWA";
 
 export default function App() {
   const [currentTab, setCurrentTab] = useState('home');
 
   // Global water state
   const water = useWaterTracker();
-
+  useEffect(() => {
+    registerAutoUpdateSW();
+  }, []);
   return (
     <>
-          <PWAUpdateButton />
-
   
     <div
       className="
